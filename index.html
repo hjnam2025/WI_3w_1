@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AmazonBand</title>
+	<link rel="stylesheet" href="index.css" >
+</head>
+
+<body>
+	
+	<a href="./iucn/iucn.html" class="menu01">IUCN이란?</a>
+
+<div class="wrap">
+	<audio id="bassSound" src="media/InBass.mp3"></audio>
+	<audio id="drumSound" src="media/InDrum.mp3"></audio>
+	<audio id="gui01Sound" src="media/InGuitar01.mp3"></audio>
+	<audio id="gui02Sound" src="media/InGuitar02.mp3"></audio>
+	<audio id="dolphinSound" src="media/Cdolphin.mp3"></audio>
+	<audio id="jaguarSound" src="media/Cjaguar.mp3"></audio>
+	<audio id="macawSound" src="media/Cmacaw.mp3"></audio>
+	<audio id="otterSound" src="media/Cotter.mp3"></audio>
+
+	<audio id="jungle" src="media/jungle.mp3"></audio>
+	<audio id="fire" src="media/fire.mp3"></audio>
+
+	<div>
+		<img class="speaker-r" id="srButton"  src="media/speaker-r.png">
+		<img class="speaker-g" id="sgButton"  src="media/speaker-g.png">
+	</div>
+
+		<img class="band-ja" id="jaguarButton"  src="media/jaguar-dr.png">
+		<img class="band-do" id="dolphinButton" src="media/dolphin-gu.png">
+		<img class="band-ot" id="otterButton" src="media/otter-ba.png">
+
+		<img class="band-ma" id="macawButton" src="media/macaw-vo.png">
+
+	<div class="mac-pop-content">
+	<img src="media/macaw.png" class="PopMacawImg">
+	
+	  <div class="wrapPop">
+			<h2 class="h2-name">히아신스 마카우</h2>
+			<h2 class="h2-status" style=" background: rgba(190, 159, 1, 0.7);">취약</h2>
+			<p class=”pop”>히아신스 마카우의 크기는 머리부터 꼬리까지 무려 1m에 달하며 앵무새 중 가장 큰 종이다. 나무 구멍에 둥지를 트고 견과류와 야자나무 씨앗의 알맹이를 단단한 검정 부리로 쪼아 먹으며 살아간다.
+			</p>
+		</div>
+	</div>
+
+	<div class="jag-wrapper">
+	  <img src="media/jaguar.png" class="PopJaguarImg">
+
+	  <div class="wrapPop2">
+			<h2 class="h2-name">재규어</h2>
+			<h2 class="h2-status" style=" background: rgba(131, 137, 18, 0.9);">준위협</h2>
+			<p class=”pop”>세계에서 세 번째로 큰 고양이과 동물로, 대부분 150파운드에서 250파운드 사이의 체중을 가진다. 재규어는 철저한 육식동물이며 기회주의적 사냥꾼이다. 그들의 이빨은 악어 가죽과 거북이 등껍질까지 뚫을 만큼 강력하다. 
+			</p>
+		</div>
+	</div>
+
+
+	<div class="ott-wrapper">
+	  <img src="media/otter.png" class="PopOtterImg">
+
+	  <div class="wrapPop3">
+			<h2 class="h2-name">큰수달</h2>
+			<h2 class="h2-status" style=" background: rgba(206, 93, 0, 0.7);">위기</h2>
+			<p class=”pop”>큰수달은 몸길이가 약 1.8미터로 세계에서 가장 큰 수달이다. 주식은 물고기이며, 때로는 협동하여 사냥한다. 부부와 새끼들로 구성된 가족 단위로 생활한다. 강둑이나 쓰러진 통나무 아래에 굴을 파고 영토를 공격적으로 방어한다.
+			</p>
+		</div>
+	</div>
+
+<div class="dol-wrapper">
+	  <img src="media/dolphin.png" class="PopDolphinImg">
+
+	  <div class="wrapPop4">
+			<h2 class="h2-name">아마존강돌고래</h2>
+			<h2 class="h2-status" style=" background: rgba(206, 93, 0, 0.7);">위기</h2>
+			<p class=”pop”>분홍강돌고래 또는 보토라고도 불리며, 오직 담수에서만 서식한다. 댐 건설로 인해 개체군이 분열되고 위협받는 특정 지역에서는 취약종으로 분류되며, 강과 호수의 오염 등 다른 위협 요소들로부터도 영향을 받고 있다.
+			</p>
+		</div>
+	</div>
+
+
+</div>
+
+
+
+	<script>
+	let MPlay = false;
+
+	macawSound.loop = true;
+
+	macawButton.onclick = function(){
+
+		const popupContainer = document.querySelector(".mac-pop-content");
+
+		if(MPlay == true){
+			macawSound.pause();
+			macawButton.style.filter = "none";
+			MPlay = false;
+			popupContainer.style.display = "none";
+
+		}else{
+			macawSound.currentTime = 0;
+			macawSound.play();
+			MPlay = true;
+			popupContainer.style.display = "block";
+		}
+
+
+	}
+
+	let JPlay = false;
+
+	jaguarSound.loop = true;
+	drumSound.loop = true;
+
+	jaguarButton.onclick = function(){
+
+		
+
+		const popupContainer = document.querySelector(".jag-wrapper");
+
+		if(JPlay == true){
+			jaguarSound.pause();
+			drumSound.pause();
+			jaguarButton.style.filter = "none";
+			JPlay = false;
+			popupContainer.style.display = "none";
+
+		}else{
+			jaguarSound.currentTime = 0;
+			drumSound.currentTime = 0;
+			drumSound.volume = 0.3;
+
+			jaguarSound.play();
+			drumSound.play();
+
+			JPlay = true;
+			popupContainer.style.display = "block";
+		}
+	}
+
+	let OPlay = false;
+
+	otterSound.loop = true;
+	bassSound.loop = true;
+
+	otterButton.onclick = function(){
+
+		const popupContainer = document.querySelector(".ott-wrapper");
+
+		if(OPlay == true){
+			otterSound.pause();
+			bassSound.pause();
+			otterButton.style.filter = "none";
+			OPlay = false;
+			popupContainer.style.display = "none";
+
+		}else{
+			otterSound.currentTime = 0;
+			bassSound.currentTime = 0;
+			bassSound.volume = 0.5;
+
+			otterSound.play();
+			bassSound.play();
+
+			OPlay = true;
+			popupContainer.style.display = "block";
+		}
+	}
+	
+
+	let DPlay = false;
+
+	dolphinSound.loop = true;
+	gui02Sound.loop = true;
+
+	dolphinButton.onclick = function(){
+
+		const popupContainer = document.querySelector(".dol-wrapper");
+
+		if(DPlay == true){
+			dolphinSound.pause();
+			gui01Sound.pause();
+			gui02Sound.pause();
+			dolphinButton.style.filter = "none";
+			DPlay = false;
+			popupContainer.style.display = "none";
+
+		}else{
+			dolphinSound.currentTime = 0;
+			gui01Sound.currentTime = 0;
+			gui02Sound.currentTime = 0;
+			dolphinSound.play();
+			gui01Sound.play();
+			gui02Sound.play();
+
+			DPlay = true;
+			popupContainer.style.display = "block";
+		}
+	}		
+
+	let sgPlay = false;
+
+	jungle.loop = true;
+	sgButton.onclick = function(){
+
+		
+		if(sgPlay == true){
+			jungle.pause();
+			sgButton.style.filter = "none";
+			sgPlay = false;
+			
+
+		}else{
+			jungle.currentTime = 0;
+			jungle.play();
+			sgPlay = true;
+			
+		}
+	}
+
+	let srPlay = false;
+
+	fire.loop = true;
+	srButton.onclick = function(){
+
+		
+		if(srPlay == true){
+			fire.pause();
+			srButton.style.filter = "none";
+			srPlay = false;
+			
+
+		}else{
+			fire.currentTime = 0;
+			fire.play();
+			srPlay = true;
+			
+		}
+	}
+
+
+</script>
+
+
+</body>
+</html>

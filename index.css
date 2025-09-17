@@ -1,0 +1,394 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+
+
+body{
+        font-family: 'Pretendard-Light';
+        line-height: 1.3rem;
+        
+        word-break: keep-all;
+
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 100vh;
+        width: 100vw;
+        background-image: url('media/fire-copy.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+h2{
+    font-family: 'Pretendard-Bold';
+    line-height: 1.3rem;
+
+}
+
+.menu01 {
+    color: white;
+    font-family: 'Pretendard-Light';
+    font-size: 2rem;
+    text-decoration: underline;
+    
+    cursor: pointer;
+
+    position: absolute;
+    left: 10%;
+    top: 4%;
+    z-index: 110;
+
+
+}
+
+/*BAND*/
+    .wrap{
+        width: 900px;
+        height: 600px;
+        
+    }
+
+    .band-ma{
+        position: absolute;
+        width: 480px;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 61%;
+        filter: drop-shadow(0px 0px 4px #000);
+        cursor:pointer;
+    }
+    
+    .band-ja{
+        position: absolute;
+        width: 470px;
+        transform: translate(-50%, -50%);
+        left: 48%;
+        top: 40%;
+        filter: drop-shadow(0px 0px 4px #000);
+        cursor:pointer;
+    }
+    
+    .band-ot{
+        position: absolute;
+        width: 400px;
+        transform: translate(-50%, -50%);
+        left: 30%;
+        top: 54%;
+        filter: drop-shadow(0px 0px 4px #000);
+        cursor:pointer;
+    }
+
+    .band-do{
+        position: absolute;
+        width: 340px;
+        transform: translate(-50%, -50%);
+        left: 67%;
+        top: 49%;
+        filter: drop-shadow(0px 0px 4px #000);
+        cursor:pointer;
+    }
+    
+/*speaker*/
+    .speaker-r{
+        position: absolute;
+        width: 300px;
+        transform: translate(-50%, -50%);
+        left: 75%;
+        top: 20%;
+        cursor:pointer;
+
+    }
+    .speaker-g{
+        position: absolute;
+        width: 300px;
+        transform: translate(-50%, -50%);
+        left: 25%;
+        top: 20%;
+        cursor:pointer;
+
+    }
+
+
+
+/*popuptext css*/
+    .wrapPop{
+        display: none;
+        flex-wrap: wrap;
+        gap: 5px;
+        color: white;
+        width: 300px; 
+        margin: 0;
+        background: rgba(0,0,0,0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 10px 25px;
+        border-radius: 10px;
+
+        position: absolute; 
+        left: 290%; 
+        top: 130%; 
+        transform: translate(10px, -50%); 
+        z-index: 102;
+
+    }
+    
+
+    .h2-name {
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    flex-basis: auto; 
+    padding: 6px; 
+    margin: 0px;
+}
+    
+    .h2-status {
+    flex-grow: 0; 
+    flex-shrink: 0; 
+    flex-basis: auto;
+    padding: 6px 18px; 
+    margin: 5px 0px;
+
+    background: black;
+    border-radius: 20px;
+}   
+
+    .pop p{ 
+        margin: 0;
+        line-height: 1.4rem;
+        left: 30%;
+        top: 50%;
+    }
+
+
+.mac-pop-content{
+    position: absolute; 
+    width: 200px;
+    height: 250px; /
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    
+    display: none; 
+    z-index: 100;
+}
+    
+
+.PopMacawImg{
+        position: absolute;
+        width: 110px;
+        left: 262%;
+        top: 108%;
+        transform: translate(-50%, -50%);
+}
+
+
+.PopMacawImg:hover + .wrapPop {
+    display: flex; 
+}
+
+
+/* JAGUAR */
+
+.wrapPop2{
+        display: none;
+        flex-wrap: wrap;
+        gap: 5px;
+        color: white;
+        width: 300px; 
+        margin: 0;
+        background: rgba(0,0,0,0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 10px 25px;
+        border-radius: 10px;
+
+        position: absolute; 
+        left: 280%; 
+        top: 30%; 
+        transform: translate(10px, -50%); 
+        z-index: 105;
+    }
+    
+
+.jag-wrapper{
+    position: absolute; 
+    width: 200px;
+    height: 250px; /
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    
+    display: none; 
+    z-index: 105;
+}
+    
+
+.PopJaguarImg{
+        position: absolute;
+        width: 110px;
+        left: 254%;
+        top: 10%;
+        transform: translate(-50%, -50%);
+        z-index: 101;
+}
+
+
+.PopJaguarImg:hover + .wrapPop2 {
+    display: flex; 
+}
+
+
+/* OTTER */
+
+.wrapPop3{
+        display: none;
+        flex-wrap: wrap;
+        gap: 5px;
+        color: white;
+        width: 300px; 
+        margin: 0;
+        background: rgba(0,0,0,0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 10px 25px;
+        border-radius: 10px;
+
+        position: absolute; 
+        left: -90%; 
+        top: 85%; 
+        transform: translate(10px, -50%); 
+        z-index: 102;
+    }
+    
+
+.ott-wrapper{
+    position: absolute; 
+    width: 200px;
+    height: 250px; /
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    
+    display: none; 
+    z-index: 100;
+}
+    
+
+.PopOtterImg{
+        position: absolute;
+        width: 110px;
+        left: 122%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+        z-index: 101;
+}
+
+
+.PopOtterImg:hover + .wrapPop3 {
+    display: flex; 
+}
+
+
+/* DOLPHIN */
+
+.wrapPop4{
+        display: none;
+        flex-wrap: wrap;
+        gap: 5px;
+        color: white;
+        width: 300px; 
+        margin: 0;
+        background: rgba(0,0,0,0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 10px 25px;
+        border-radius: 10px;
+
+        position: absolute; 
+        left: 460%; 
+        top: 55%; 
+        transform: translate(10px, -50%); 
+        z-index: 102;
+    }
+    
+
+.dol-wrapper{
+    position: absolute; 
+    width: 200px;
+    height: 250px; /
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    
+    display: none; 
+    z-index: 100;
+}
+    
+
+.PopDolphinImg{
+        position: absolute;
+        width: 110px;
+        left: 430%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+        z-index: 101;
+}
+
+
+.PopDolphinImg:hover + .wrapPop4 {
+    display: flex; 
+}
